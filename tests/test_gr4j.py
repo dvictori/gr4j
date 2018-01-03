@@ -12,10 +12,10 @@ class Gr4jTestCase(unittest.TestCase):
     def setUp(self):
         test_data = pd.read_csv(os.path.join(os.path.dirname(__file__), 'USGS_02430680_combined.csv'), skiprows=1)
         sims = pd.read_csv(os.path.join(os.path.dirname(__file__), 'sims.csv'), header=None, skiprows=1)
-        self.p = test_data['P'].ix[:729]
-        self.pet = test_data['PE'].ix[:729]
-        self.qobs = test_data['Q'].ix[:729]
-        self.qsim = sims.ix[:,0]
+        self.p = test_data['P'].loc[:729]
+        self.pet = test_data['PE'].loc[:729]
+        self.qobs = test_data['Q'].loc[:729]
+        self.qsim = sims.loc[:,0]
 
     def tearDown(self):
         pass
