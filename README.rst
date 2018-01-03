@@ -26,7 +26,7 @@ A single method that takes input rainfall and potential evapotranspiration data,
 
 See Perrin et al. 2003 paper (referenced below) on the parameters for the model.
 
-:
+::
 
    from gr4j import gr4j
    params = { 'X1': 303.627616, 'X2': 0.32238919, 'X3': 6.49759466, 'X4': 0.294803885 }
