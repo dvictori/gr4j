@@ -17,8 +17,7 @@ Installation
 
 Install from Github::
 
- pip install git+https://github.com/amacd31/gr4j.git
-
+   pip install git+https://github.com/amacd31/gr4j.git
 
 Usage
 -----
@@ -27,18 +26,19 @@ A single method that takes input rainfall and potential evapotranspiration data,
 
 See Perrin et al. 2003 paper (referenced below) on the parameters for the model.
 
-::
+:
 
- from gr4j import gr4j
- params = { 'X1': 303.627616, 'X2': 0.32238919, 'X3': 6.49759466, 'X4': 0.294803885 }
- states = { 'production_store': 0.60 * params['X1'], 'routing_store': 0.70 * params['X3'] }
- rainfall = [ 14.1, 3.7, 7.1, 9.3 ]
- potential_evap = [ 0.46, 0.46, 0.47, 0.47 ]
+   from gr4j import gr4j
+   params = { 'X1': 303.627616, 'X2': 0.32238919, 'X3': 6.49759466, 'X4': 0.294803885 }
+   states = { 'production_store': 0.60 * params['X1'], 'routing_store': 0.70 * params['X3'] }
+   rainfall = [ 14.1, 3.7, 7.1, 9.3 ]
+   potential_evap = [ 0.46, 0.46, 0.47, 0.47 ]
 
- simulated_flow = gr4j(rainfall, potential_evap, params, states)
+   simulated_flow = gr4j(rainfall, potential_evap, params, states)
 
-Notes
------
+
+Notes from amacd31
+-----------
 
 Implemented as a learning exercise. Code based on the paper 2003 paper by
 Perrin et al. and the website summary of the model. Results compared to the
@@ -49,6 +49,11 @@ The design of a single functional method was chosen as part of this learning
 exercise with a mind to later implement an OpenCL version in C for parallel
 usage. Later work may update the design of this package, but that is not
 currently planned for the near future.
+
+Notes from dvictori
+-------------------
+
+Cloned in order to learn how to use the code and to implement automatic parameter estimation using python optimization packages. Learning exercises are in https://github.com/dvictori/learn_gr4j
 
 References
 ----------
